@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Place Order</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+<body>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assests/img/header-logo.jpg"  class="me-2">
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#track">Track Order</a></li>
+        <li class="nav-item">
+          <a class="btn btn-warning ms-lg-3" href="#login">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <h3 class="mb-4">Delivery Details</h3>
+
+<form id="orderForm">
+
+  <input type="hidden" id="productId">
+<input type="text"
+       id="name"
+       class="form-control mb-3"
+       placeholder="Full Name"
+       required>
+
+  <!-- EMAIL -->
+  <input type="email"
+         id="email"
+         class="form-control mb-3"
+         placeholder="Email Address"
+         required>
+
+  <!-- PHONE -->
+  <input type="tel"
+         id="phone"
+         class="form-control mb-3"
+         placeholder="Phone Number"
+         pattern="[6-9][0-9]{9}"
+         required>
+
+  <!-- ADDRESS -->
+  <textarea id="address"
+            class="form-control mb-3"
+            placeholder="Full Address"
+            required></textarea>
+
+  <!-- DISTRICT -->
+  <input type="text"
+         id="district"
+         class="form-control mb-3"
+         placeholder="District"
+         required>
+
+  <!-- TALUK -->
+  <input type="text"
+         id="taluk"
+         class="form-control mb-3"
+         placeholder="Taluk"
+         required>
+
+  <!-- POST -->
+  <input type="text"
+         id="post"
+         class="form-control mb-3"
+         placeholder="Post"
+         required>
+
+  <!-- PINCODE -->
+  <input type="text"
+         id="pincode"
+         class="form-control mb-3"
+         placeholder="Pincode"
+         pattern="[0-9]{6}"
+         required>
+
+  <button class="btn btn-success w-100">
+    Submit & Pay
+  </button>
+</form>
+
+<div id="paymentBox" class="text-center d-none mt-4">
+  <h4>Pay via UPI</h4>
+
+  <p><strong>UPI ID:</strong> yourupi@bank</p>
+
+  <img src="upi-qr.png" width="220">
+
+  <button class="btn btn-primary mt-3" id="paidBtn">
+    I Have Paid
+  </button>
+</div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="py-3 bg-black text-center text-white">
+  <p class="mb-0">© 2025 Hyper Gadget. All Rights Reserved.</p>
+
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="order.js"></script>
+</body>
+</html>
