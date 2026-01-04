@@ -5463,6 +5463,7 @@ th {
 }
 #cartModal input ,#cartModal  textarea{
     border:1px solid #171717;
+	color:#000 !important;
     border-radius: 5px ;
 }
 #cartModal input::placeholder,#cartModal textarea::placeholder{
@@ -5484,7 +5485,7 @@ th {
 @media(max-width:768px){
     .product-grid-row{
       display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 5px; 
 }
 }
@@ -5832,4 +5833,5 @@ span.count-description {
   font-size: 12px;
   padding: 5 10px;
 }
+
 }
