@@ -5395,7 +5395,7 @@ th {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: var(--primary);
+            background: #fff;
             width: 65px;
             height: 65px;
             border-radius: 50%;
@@ -5835,3 +5835,4 @@ span.count-description {
 }
 
 }
+
