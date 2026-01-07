@@ -710,6 +710,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
         </section>
 
         <!-- End Of Contact Us Section -->
+<!-- ADD TO CART POPUP -->
+<div id="cart-toast">
+    <i class="fa fa-check-circle"></i> Added to cart
+</div>
 
         
 
@@ -852,12 +856,40 @@ function updateCartDisplay() {
 
 /* WHATSAPP ORDER */
 function sendWhatsApp() {
+
     if (!Object.keys(cart).length) {
         alert('Cart empty!');
         return;
     }
 
-    var msg = '*NEW ORDER - HYPERGADGET*%0A----------------%0A';
+    // 🧍 Customer Details
+    var name = document.getElementById('cust-name').value;
+    var phone = document.getElementById('cust-phone').value;
+    var district = document.getElementById('cust-district').value;
+    var address = document.getElementById('cust-address').value;
+    var pincode = document.getElementById('cust-pincode').value;
+
+    // ❗ Simple validation
+    if (!name || !phone || !address) {
+        alert('Please fill Name, Phone and Address');
+        return;
+    }
+
+    var msg = `*NEW ORDER - HYPERGADGET*%0A`;
+    msg += `------------------------%0A`;
+
+    // 👤 Customer Info
+    msg += `*Customer Details*%0A`;
+    msg += `Name: ${name}%0A`;
+    msg += `Phone: ${phone}%0A`;
+    msg += `District: ${district}%0A`;
+    msg += `Address: ${address}%0A`;
+    msg += `Pincode: ${pincode}%0A`;
+    msg += `------------------------%0A`;
+
+    // 🛒 Product Details
+    msg += `*Order Items*%0A`;
+
     var total = 0;
 
     for (var item in cart) {
@@ -866,14 +898,41 @@ function sendWhatsApp() {
         msg += `• ${item} x ${cart[item].qty} = ₹${sub}%0A`;
     }
 
-    msg += `----------------%0A*TOTAL: ₹${total}*`;
+    msg += `------------------------%0A`;
+    msg += `*TOTAL: ₹${total}*%0A`;
+    msg += `------------------------%0A`;
+    msg += `Thank you for shopping with HyperGadget 🙏`;
 
     window.open('https://wa.me/919360724594?text=' + msg);
 }
 
+
 /* LOAD CART ON PAGE LOAD */
 updateCartDisplay();
 </script>
+
+<script>
+/* ===== ADD TO CART EFFECT WRAPPER ===== */
+
+// keep original function safe
+const _originalAddToCart = addToCart;
+
+// override without changing logic
+addToCart = function(name, price){
+    _originalAddToCart(name, price);
+
+    // show bottom popup
+    const toast = document.getElementById('cart-toast');
+    toast.classList.add('show');
+    setTimeout(()=>toast.classList.remove('show'),2000);
+
+    // animate sticky cart
+    const cartBtn = document.querySelector('.sticky-cart-btn');
+    cartBtn.classList.add('pulse');
+    setTimeout(()=>cartBtn.classList.remove('pulse'),400);
+};
+</script>
+
 
     </body>
     
