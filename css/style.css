@@ -5844,7 +5844,7 @@ span.count-description {
 /* ===== ADD TO CART TOAST ===== */
 #cart-toast{
     position:fixed;
-    bottom:20px;
+    bottom:50%;
     left:50%;
     transform:translateX(-50%) translateY(80px);
     background:#28a745;
@@ -11700,5 +11700,6 @@ span.count-description {
 }
 
 }
+
 
 
