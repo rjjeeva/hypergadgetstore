@@ -5847,7 +5847,7 @@ span.count-description {
     bottom:50%;
     left:50%;
     transform:translateX(-50%) translateY(80px);
-    background:#;
+    background:green;
     color:#fff;
     padding:12px 22px;
     border-radius:30px;
@@ -11700,6 +11700,7 @@ span.count-description {
 }
 
 }
+
 
 
 
