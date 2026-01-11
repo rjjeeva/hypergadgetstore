@@ -78,7 +78,23 @@ a:hover {
     outline: none;
     text-decoration: none;
 }
+ .insta-video-section {
+      width: 100%;
+      padding: 20px 0;
+    }
 
+    .insta-video-carousel .item {
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .insta-video-carousel video {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 9 / 16; /* Instagram Reel ratio */
+      object-fit: cover;
+      display: block;
+    }
 
 /* Transition elements
 /* ------------------------------ */
@@ -11700,6 +11716,7 @@ span.count-description {
 }
 
 }
+
 
 
 
