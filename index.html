@@ -43,7 +43,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto:700,500,400' rel='stylesheet' type='text/css'>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
         <!-- Essential JS Files -->
    <script src="js/vendor/jquery-1.11.3.min.js"></script>
 <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -651,7 +652,44 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
 
 
    
+<!-- VIDEO CAROUSEL SECTION -->
+  <section class="insta-video-section">
+    <div class="owl-carousel insta-video-carousel">
 
+      <div class="item">
+        <video autoplay muted loop playsinline>
+          <source src="/img/humber.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="item">
+        <video autoplay muted loop playsinline>
+          <source src="/img/bunny.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="item">
+        <video autoplay muted loop playsinline>
+          <source src="/img/hum.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="item">
+        <video autoplay muted loop playsinline>
+          <source src="/img/rapid.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="item">
+        <video autoplay muted loop playsinline>
+          <source src="/img/pandalamp.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+  </section>
+
+  
 
 
         <!-- Contact Us Section -->
@@ -769,6 +807,40 @@ Copyright © 2026 Hyper <span>gadget</span> All rights reserved</a>
 <script src="js/jquery.countTo.js"></script>
 <script src="js/gmap.js"></script>
 <script src="js/main.js"></script>
+<!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.insta-video-carousel').owlCarousel({
+        loop: true,
+        margin: 15,
+        autoplay: true,
+        autoplayTimeout: 3500,
+        autoplayHoverPause: true,
+        dots: false,
+        nav: false,
+
+        responsive: {
+          0: {
+            items: 2
+          },
+          576: {
+            items: 2
+          },
+          992: {
+            items: 3
+          },
+          1200: {
+            items: 4
+          }
+        }
+      });
+    });
+  </script>
 
 <script>
 /* ================= CART WITH LOCAL STORAGE ================= */
