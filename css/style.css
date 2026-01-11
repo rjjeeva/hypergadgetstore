@@ -426,7 +426,7 @@ ul {
     position: relative;
     width: 100%;
     height: 100vh;
-    max-height: 290px;
+    max-height: 290px !important;
 
 }
 .slider-caption {
@@ -11712,6 +11712,7 @@ span.count-description {
 }
 
 }
+
 
 
 
