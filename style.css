@@ -185,7 +185,9 @@ ul {
     list-style: inherit;
 }
 
-
+.product-card p{
+    font-family: 'Roboto';
+    font-weight: 700;}
 /* Form Style
 /* ------------------------------ */
 .form-group {
@@ -1401,4 +1403,5 @@ box-shadow: inset 0px 2px 25px -8px rgba(0,0,0,0.76);
   grid-template-columns: repeat(2, 1fr);
   gap: 5px; 
 }
+
 }
