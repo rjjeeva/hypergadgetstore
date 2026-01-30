@@ -233,7 +233,9 @@ ul {
 .morphext > .animated {
     display: inline-block;
 }
-
+body .product-card p{
+font-weight:700 !important;
+font-family:'Roboto' ! important;}
 .section-title {
     font-size: 30px;
     line-height: 30px;
@@ -1405,3 +1407,4 @@ box-shadow: inset 0px 2px 25px -8px rgba(0,0,0,0.76);
 }
 
 }
+
